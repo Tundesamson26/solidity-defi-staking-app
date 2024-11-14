@@ -69,7 +69,7 @@
   "sourceMap": "66:521:1:-:0;;;201:10;193:5;;:18;;;;;;;;;;;;;;;;;;66:521;;;;;;",
   "deployedSourceMap": "66:521:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;410:175;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;118:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;92:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;295:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;410:175;274:5;;;;;;;;;;260:19;;:10;:19;;;256:26;;;476:19:::1;509:11;476:45;;531:8;:21;;;553:24;;531:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::0;::::1;;;;;;;;;;;;::::0;::::1;;;;;;;;;281:1;256:26:::0;410:175;:::o;118:36::-;;;;:::o;92:20::-;;;;;;;;;;;;:::o;295:109::-;274:5;;;;;;;;;;260:19;;:10;:19;;;256:26;;;388:9:::1;361:24;:36;;;;256:26:::0;295:109;:::o",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.7.0 <0.9.0;\n\ncontract Migrations {\n    address public owner;\n    uint public last_completed_migration;\n\n    constructor() payable {\n        owner = msg.sender;\n    }\n\n    modifier restricted() {\n        if (msg.sender == owner) _;\n    }\n\n    function setCompleted(uint completed) public restricted {\n        last_completed_migration = completed;\n    }\n\n    function upgrade(address new_address) public restricted {\n        Migrations upgraded = Migrations(new_address);\n        upgraded.setCompleted(last_completed_migration);\n    }\n}\n",
-  "sourcePath": "/home/bigsam/defi-staking-app-starter/defi-staking-app-starter/src/contracts/Migrations.sol",
+  "sourcePath": "/home/bigsam/defi-staking-app-starter/src/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1530,10 +1530,16 @@
       "links": {},
       "address": "0x3461ed76Ceb1c2783409f323699DDd3B2bA5429d",
       "transactionHash": "0x8e191475e810f5362e2c04d59d1b306da3ac67b9cb3b4f6735d3dff3b711fcdd"
+    },
+    "1731599525011": {
+      "events": {},
+      "links": {},
+      "address": "0x63b3868101Bb82fA03B1fC3172A53507B3F7C5a2",
+      "transactionHash": "0xd0230ef12050c6a50f24007ea25eb0223ee4c91ed8f51c02d6ef5479d09679a9"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-11-13T01:20:03.206Z",
+  "updatedAt": "2024-11-14T16:13:35.665Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

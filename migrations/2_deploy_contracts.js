@@ -21,7 +21,7 @@ module.exports = async function(deployer, network, accounts) {
     await rwd.transfer(decentralBank.address, "1000000000000000000000000");
 
     // transfer all tether to the Decentral bank
-    await tether.transfer(DecentralBank.address, "1000000000000000000000000");
+    // await tether.transfer(decentralBank.address, "1000000000000000000000000");
 
     // transfer 100 Meal Tether to investor
     await tether.transfer(accounts[1], "1000000000000000000");
