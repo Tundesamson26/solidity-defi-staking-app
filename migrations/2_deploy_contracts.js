@@ -33,4 +33,5 @@ module.exports = async function(deployer, network, accounts) {
     console.log("Current deployer balance:", balance.toString());
     throw error;
   }
+  
 };
