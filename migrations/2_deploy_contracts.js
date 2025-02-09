@@ -32,6 +32,5 @@ module.exports = async function(deployer, network, accounts) {
     const balance = await tether.balanceOf(accounts[0]);
     console.log("Current deployer balance:", balance.toString());
     throw error;
-  }
-  
+  } 
 };
